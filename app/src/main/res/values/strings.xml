@@ -1,0 +1,27 @@
+<resources>
+    <!-- Main Activity -->
+    <string name="app_name">DublinSounds</string>
+    <string name="gigsButton">Gigs</string>
+    <string name="venuesButton">Venues</string>
+    <string name="radioButton">Radio</string>
+    <string name="cameraButton">Camera</string>
+
+    <!-- Gigs Activity -->
+    <string name="submitEvent">Submit</string>
+    <string name="artistName">Artist: </string>
+    <string name="gigSelection">Enter the name of your favourite artist to see their tour dates !</string>
+
+    <!-- Gigs API Activity -->
+    <string name="eventDate">Date: </string>
+    <string name="eventTime">Time: </string>
+    <string name="eventName">Name: </string>
+    <string name="eventCountry">Where: </string>
+
+    <!-- Radio Activity -->
+    <string name="startRadioBtn">Start Radio</string>
+    <string name="airportLbl">Dublin Airport</string>
+    <string name="playBtn">Play</string>
+    <string name="pauseBtn">Pause</string>
+    <string name="resumeBtn">Resume</string>
+    <string name="stopBtn">Stop</string>
+</resources>

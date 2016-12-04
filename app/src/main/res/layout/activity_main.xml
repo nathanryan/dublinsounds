@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.nathan.dublinsounds.MainActivity">
+
+    <ImageView
+        android:layout_width="382dp"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/appLogoImageView"
+        android:contentDescription="app logo"
+        android:layout_height="200dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="25dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:text="@string/gigsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gigsBtn"
+                android:drawableRight="@drawable/gigsbtn" />
+
+            <Button
+                android:text="@string/venuesButton"
+                android:layout_width="wrap_content"
+                android:id="@+id/venuesBtn"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/venuesbtn" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:text="@string/radioButton"
+                android:layout_width="wrap_content"
+                android:id="@+id/radioBtn"
+                android:drawableRight="@drawable/radiobtn"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:text="@string/cameraButton"
+                android:layout_width="wrap_content"
+                android:id="@+id/cameraBtn"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/camerabtn" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
