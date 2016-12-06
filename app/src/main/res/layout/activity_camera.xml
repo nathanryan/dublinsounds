@@ -11,13 +11,25 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.nathan.dublinsounds.CameraActivity">
 
-    <Button
-        android:text="Button"
+    <TextView
+        android:text="@string/textCamera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:id="@+id/textView3"
+        android:textAlignment="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/buttonCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
-        android:id="@+id/button" />
+        android:layout_marginTop="14dp" />
 
     <ImageView
         android:layout_width="wrap_content"

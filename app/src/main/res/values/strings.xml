@@ -18,10 +18,15 @@
     <string name="eventCountry">Where: </string>
 
     <!-- Radio Activity -->
-    <string name="startRadioBtn">Start Radio</string>
+    <string name="startRadioBtn">Start Live Airport Stream</string>
     <string name="airportLbl">Dublin Airport</string>
+    <string name="musicLbl">Play Ambient Music</string>
     <string name="playBtn">Play</string>
     <string name="pauseBtn">Pause</string>
     <string name="resumeBtn">Resume</string>
     <string name="stopBtn">Stop</string>
+
+    <!-- Camera Activity -->
+    <string name="textCamera">Take a picture to save to your Concerts folder !</string>
+    <string name="buttonCamera">Launch Camera</string>
 </resources>
