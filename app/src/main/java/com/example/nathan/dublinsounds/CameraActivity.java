@@ -4,6 +4,10 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
@@ -18,6 +22,7 @@ import android.widget.Toast;
 public class CameraActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private ImageView imageView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,18 +45,24 @@ public class CameraActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            imageView.setImageBitmap(imageBitmap);
+            //Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) data.getExtras().get("data");
+            //Drawable concertImage = new BitmapDrawable(getResources(), imageBitmap);
+
+            Drawable[] layers = new Drawable[2];
+            layers[0] = new BitmapDrawable(getResources(), imageBitmap);
+            layers[1] = getResources().getDrawable(R.drawable.vibes);
+            LayerDrawable layerDrawable = new LayerDrawable(layers);
+            imageView.setImageDrawable(layerDrawable);
+
+            //imageView.setImageBitmap(imageBitmap);
         }
     }
-
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void dispatchTakePictureIntent() {
         if (checkSelfPermission(Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(getApplicationContext(), "I am asking for permission", Toast.LENGTH_SHORT).show();
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 1);
         } else {
             // we have permission
