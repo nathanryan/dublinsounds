@@ -32,15 +32,15 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/launchCameraBtn"
         android:contentDescription="musicPic" />
 
     <Button
         android:text="@string/buttonCamera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_marginTop="18dp"
+        android:id="@+id/launchCameraBtn"
+        android:layout_marginTop="13dp"
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true" />
 

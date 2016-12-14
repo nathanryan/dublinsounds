@@ -1,5 +1,19 @@
 package com.example.nathan.dublinsounds;
 
+/*
+* RadioActivity.java
+*
+* Version 1
+*
+* 14/12/2016
+*
+* @reference https://www.youtube.com/watch?v=pPpVZ8YZXHk Tihomir Radeff
+*
+* License free music file sourced from Moby http://moby.com/la1/
+*
+* @author Nathan Ryan x13448212
+ */
+
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
@@ -15,9 +29,9 @@ public class RadioActivity extends AppCompatActivity {
     MediaPlayer radioPlayer = new MediaPlayer();
     boolean prepared = false;
     boolean started = false;
-    //online dublin airport radio stream
+    //online dublin airport radio stream (it does work but takes longer than a music station to play)
     String stream = "http://mtl2.liveatc.net/eidw3";
-    //http://stream.radioreklama.bg/radio1rock128
+    // test radio stream http://stream.radioreklama.bg/radio1rock128
 
     MediaPlayer mySound;
 
@@ -34,6 +48,9 @@ public class RadioActivity extends AppCompatActivity {
         mySound = MediaPlayer.create(this, R.raw.la1);
         //song player
 
+    /*
+    * @author Nathan Ryan x13448212
+    */
         b2.setOnClickListener (new View.OnClickListener(){
             @Override
             public void onClick ( View v) {
@@ -46,7 +63,7 @@ public class RadioActivity extends AppCompatActivity {
             }
         });
 
-        //pause ringtone
+        //pause song
         b3.setOnClickListener (new View.OnClickListener(){
             @Override
             public void onClick ( View v) {
@@ -54,7 +71,7 @@ public class RadioActivity extends AppCompatActivity {
             }
         });
 
-        //resume ringtone
+        //resume song
         b4.setOnClickListener (new View.OnClickListener(){
             @Override
             public void onClick ( View v) {

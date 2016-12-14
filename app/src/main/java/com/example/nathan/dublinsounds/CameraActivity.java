@@ -1,23 +1,34 @@
 package com.example.nathan.dublinsounds;
 
+/*
+* CameraActivity.java
+*
+* Version 1
+*
+* 14/12/2016
+*
+* @reference CameraIntentExample File Dominic Carr dominic.carr@ncirl.ie
+*
+* @author Nathan Ryan x13448212
+*
+ */
+
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Build;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 public class CameraActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -29,7 +40,7 @@ public class CameraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
-        Button click = (Button)  findViewById(R.id.button);
+        Button click = (Button)  findViewById(R.id.launchCameraBtn);
 
         imageView = (ImageView) findViewById(R.id.imageView);
 
@@ -40,22 +51,23 @@ public class CameraActivity extends AppCompatActivity {
                 dispatchTakePictureIntent();
             }
         });
+
+
     }
 
+    /*
+    * @author Nathan Ryan x13448212
+    */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            //Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) data.getExtras().get("data");
-            //Drawable concertImage = new BitmapDrawable(getResources(), imageBitmap);
 
             Drawable[] layers = new Drawable[2];
             layers[0] = new BitmapDrawable(getResources(), imageBitmap);
             layers[1] = getResources().getDrawable(R.drawable.vibes);
             LayerDrawable layerDrawable = new LayerDrawable(layers);
             imageView.setImageDrawable(layerDrawable);
-
-            //imageView.setImageBitmap(imageBitmap);
         }
     }
 
@@ -92,4 +104,3 @@ public class CameraActivity extends AppCompatActivity {
         }
     }
     }
-

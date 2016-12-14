@@ -1,5 +1,20 @@
 package com.example.nathan.dublinsounds;
 
+/*
+* VenuesActivity.java
+*
+* Version 1
+*
+* 14/12/2016
+*
+* @reference http://www.codemarvels.com/2013/09/list-view-using-simplecursor-adapter-part-i/
+* @reference http://stackoverflow.com/questions/16663624/google-map-v2-on-top-half-of-the-android-screen-and-list-view-on-the-bottom-half
+*
+* All Venue descriptions sourced from Wikipedia
+*
+* @author Nathan Ryan x13448212
+ */
+
 import android.database.Cursor;
 import android.database.SQLException;
 import android.support.v4.app.FragmentActivity;
@@ -23,19 +38,29 @@ import java.io.IOException;
 
 public class VenuesActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    // http://stackoverflow.com/questions/16663624/google-map-v2-on-top-half-of-the-android-screen-and-list-view-on-the-bottom-half
+    //specify marker locations of Concert Venues
     private static final LatLng CITYCENTRE = new LatLng(53.3498,-6.2603);
     private static final LatLng VICARST = new LatLng(53.3419,-6.2774);
     private static final LatLng OLYMPIA = new LatLng(53.3443,-6.2661);
     private static final LatLng THREEARENA = new LatLng(53.3475,-6.2285);
+    private static final LatLng WHELANS = new LatLng(53.3366,-6.2657);
+    private static final LatLng GRANDSOCIAL = new LatLng(53.3469,-6.2635);
+    private static final LatLng NATCONCERTHALL = new LatLng(53.3348,-6.2592);
+    private static final LatLng BUTTONFACTORY = new LatLng(53.3449,-6.2645);
+    private static final LatLng ACADEMY = new LatLng(53.3480,-6.2620);
+
 
     private Marker mVicarSt;
     private Marker mOlympia;
     private Marker mThreeArena;
+    private Marker mWhelans;
+    private Marker mGrandSocial;
+    private Marker mNatConcertHall;
+    private Marker mButtonFactory;
+    private Marker mAcademy;
 
     private GoogleMap mMap;
 
-    //http://www.codemarvels.com/2013/09/list-view-using-simplecursor-adapter-part-i/
     DatabaseHelper db;
     SimpleCursorAdapter dataAdapter;
     private ListView listView;
@@ -83,6 +108,9 @@ public class VenuesActivity extends FragmentActivity implements OnMapReadyCallba
         listView.setAdapter(dataAdapter);
     }
 
+    /*
+    * @author Nathan Ryan x13448212
+    */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -102,6 +130,31 @@ public class VenuesActivity extends FragmentActivity implements OnMapReadyCallba
                 .position(THREEARENA)
                 .title("3 Arena"));
         mThreeArena.setTag(0);
+
+        mWhelans = mMap.addMarker(new MarkerOptions()
+                .position(WHELANS)
+                .title("Whelans"));
+        mWhelans.setTag(0);
+
+        mGrandSocial = mMap.addMarker(new MarkerOptions()
+                .position(GRANDSOCIAL)
+                .title("The Grand Social"));
+        mGrandSocial.setTag(0);
+
+        mNatConcertHall = mMap.addMarker(new MarkerOptions()
+                .position(NATCONCERTHALL)
+                .title("National Concert Hall"));
+        mNatConcertHall.setTag(0);
+
+        mButtonFactory = mMap.addMarker(new MarkerOptions()
+                .position(BUTTONFACTORY)
+                .title("The Button Factory"));
+        mButtonFactory.setTag(0);
+
+        mAcademy = mMap.addMarker(new MarkerOptions()
+                .position(ACADEMY)
+                .title("The Academy"));
+        mAcademy.setTag(0);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(CITYCENTRE));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(12.5f));

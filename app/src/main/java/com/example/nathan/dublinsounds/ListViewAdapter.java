@@ -1,6 +1,15 @@
 package com.example.nathan.dublinsounds;
 
-/* Adapted from @dmitryfisko Android Bandsintown API usage example. https://github.com/dmitryfisko/SelectiveTask */
+/*
+* ListViewAdapter.java
+*
+* Version 1
+*
+* 25/11/2016
+*
+* @reference https://github.com/dmitryfisko/SelectiveTask Dmitry Fisko
+*
+ */
 
 import android.content.Context;
 import android.view.LayoutInflater;

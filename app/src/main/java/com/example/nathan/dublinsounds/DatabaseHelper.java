@@ -1,5 +1,16 @@
 package com.example.nathan.dublinsounds;
 
+/*
+* DatabaseHelper.java
+*
+* Version 1
+*
+* 25/11/2016
+*
+* @reference http://blog.reigndesign.com/blog/using-your-own-sqlite-database-in-android-applications/ Juan-Manuel Fluxà
+*
+ */
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -11,11 +22,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-
-/**
- * Created by nathan on 25/11/2016.
- * http://blog.reigndesign.com/blog/using-your-own-sqlite-database-in-android-applications/
- */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     //The Android's default system path of your application database.

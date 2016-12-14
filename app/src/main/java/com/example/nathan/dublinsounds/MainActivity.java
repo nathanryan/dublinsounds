@@ -1,13 +1,23 @@
 package com.example.nathan.dublinsounds;
 
+/*
+* MainActivity.java
+*
+* Version 1
+*
+* 14/12/2016
+*
+* @author Nathan Ryan x13448212
+*
+* Icon pack by Icons8 https://icons8.com
+*
+ */
+
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-//<a href="https://icons8.com">Icon pack by Icons8</a>
 
 public class MainActivity extends AppCompatActivity {
 

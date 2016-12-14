@@ -1,6 +1,15 @@
 package com.example.nathan.dublinsounds;
 
-/* Adapted from @dmitryfisko Android Bandsintown API usage example. https://github.com/dmitryfisko/SelectiveTask */
+/*
+* GigsActivity.java
+*
+* Version 1
+*
+* 25/11/2016
+*
+* @reference https://github.com/dmitryfisko/SelectiveTask Dmitry Fisko
+*
+ */
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;

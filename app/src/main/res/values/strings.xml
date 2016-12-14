@@ -27,6 +27,7 @@
     <string name="stopBtn">Stop</string>
 
     <!-- Camera Activity -->
-    <string name="textCamera">Take a picture too see a Good Vibes filter !</string>
+    <string name="textCamera">Take a picture to see a Good Vibes filter !</string>
     <string name="buttonCamera">Launch Camera</string>
+    <string name="savePicture">Save Picture</string>
 </resources>
